@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="gas.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+  <h1>Kerri's Gas Program</h1>
+  <form>
+    <p>enter gas price</p>
+    <input type="text" id="text1" style="background-color: rgb(178, 120, 243); border-color: rgb(178, 120, 243);"><br>
+    <input type="button" class="button2" onclick="addGasPrice();">submit</input>
+  </form>
+
+  <div id="result">
+  </div>
+  
+  <script>var Final
+    var GasPrice
+    var Gallons
+    
+    function addGasPrice(GasPrice) {
+        GasPrice = (document.getElementById("text1").value);
+        console.log(GasPrice);
+        var i = 0;
+        while (i < 50) {
+            i = i + .01;
+            i = i.toFixed(2);
+            i = parseFloat(i);
+            var g = i / GasPrice;
+            g = g.toFixed(4);
+            g = parseFloat(g);
+    
+            if (i == .01)
+                var wiggle = g;
+    
+            if (Math.floor(i / 10) % 2 == 0 && Math.floor(i) % 2 == 0 &&
+                Math.floor(i * 10) % 2 == 0 && Math.floor(i * 100) % 2 == 0 &&
+                Math.floor(g / 10) % 2 == 0 && Math.floor(g) % 2 == 0 && Math.floor(g * 10) % 2 == 0 &&
+                Math.floor(g * 100) % 2 == 0) {
+                console.log("Total=" + i + " Gallons=" + g + " with " + wiggle + "Gallons Wiggle Room");
+                document.getElementById("result").innerHTML = document.getElementById("result").innerHTML
+                    + "<br>" + "Total=" + i + " Gallons=" + g + " with " + wiggle + "Gallons Wiggle Room";}
+    
+            }
+    
+        }
+    
+        function DisplayResults(i, g, wiggle) {
+            document.getElementById("result").innerHTML = document.getElementById("result").innerHTML
+                + "<br>" + "Total=" + i + " Gallons=" + g + " with " + wiggle + "Gallons Wiggle Room";
+        }</script>
+</body>
+
+</html>
