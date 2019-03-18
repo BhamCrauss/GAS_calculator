@@ -1,0 +1,24 @@
+{
+    "name": "CA-page",
+    "version": "1.0.0",
+    "description": "",
+    "main": "Frontend/Server.js",
+    "scripts": {
+      "test": "echo 'Error: no test specified' && exit 1",
+      "start": "node Frontend/Server.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/BhamCrauss/GAS_calculator.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/BhamCrauss/GAS_calculator/issues"
+    },
+    "homepage": "https://github.com/BhamCrauss/GAS_calculator#readme",
+    "dependencies": {
+      "express": "^4.16.4",
+      "path": "^0.12.7"
+    }
+  }
